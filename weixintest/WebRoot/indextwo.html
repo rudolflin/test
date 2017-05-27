@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>微学堂</title>
+	<meta name="viewport" content="width=640">
+	 <script src="./js/mobile-util.js"></script>
+	 <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 全屏模式 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- 强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<meta name="full-screen" content="yes">
+	<!-- 强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+<style type="text/css">
+	*{margin: 0;padding: 0;}
+	html,body{height: 100%;width: 100%;}
+	.mainbox{height: 100%;background:url(./img/zhibo.jpg) no-repeat center center;background-size: cover;padding: 0 35px;}
+	
+	h3{line-height: 102px;height: 102px;font-size:28px;color: white;padding: 0 6px 0 18px;margin-top: 20px;}
+	h3 span{display: inline-block;font-weight: 700;display: inline-block;vertical-align: middle;width: 140px;}
+	h3 b{font-size:26px;vertical-align:middle;width: 406px;display: inline-block;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+	.video{width: 506px;height: 294px;margin: 0 auto;margin-top:26px;position: relative;z-index: 10000;}
+	
+	footer{background: #FFCA30;margin-top: 50px;padding: 30px 20px 30px 20px;}
+	footer section {border: 2px solid black; padding-left:10px;font-size: 30px;line-height: 36px;padding-bottom: 10px;}
+	section h5{font-size: 26px;margin-top: 18px;margin-bottom: 3px;}
+	section h5 span{vertical-align: middle;}
+	section h5 em{font-size: 22px;display: inline-block;width: 380px;vertical-align: middle;}
+	section b{font-size: 26px;display: inline-block;vertical-align: middle;}
+	section i{display: inline-block;vertical-align: middle;font-size: 24px;font-weight: 700;}
+	section{text-align: center;}
+	footer h6{border-top: 2px solid black;margin-top: 42px; font-size: 0;}
+	footer h6 span{display: inline-block;height: 42px;line-height: 42px;padding: 0 20px;background: black;color: #FFCB2F;font-size: 26px;letter-spacing: 2px;position: relative;top: -23px;position: relative;z-index: 0!important;}
+	footer p{font-size: 22px;color: #000100;line-height: 28px;font-weight: 600;padding-left: 2em;}
+	.maxbox{height: 356px;width: 566px;margin: 0 auto;background: url(./img/open.png) no-repeat center center;background-size: cover;font-size: 0;}
+
+	</style>	
+</head>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?386121e1ec994f497e138a4f754c910a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<body>
+	<div class="mainbox clearfix">
+		<h3><span>今日课程：</span><b>《中国联通创新业务—云计算营销 》 </b></h3>
+		<div class="maxbox clearfix">
+			<div class="video" id="id_video_container"></div>
+		</div>
+
+		<footer>
+			<section>
+				<h5><span>今日课程：</span><em>《中国联通创新业务—云计算营销 》</em></h5>
+				<b>主讲人：</b><i>林伟星   </i>
+				<i>联通云数据公司市场营销部总监 </i>
+			<!-- 	<i>山东分公司市场部主管</i> -->
+			</section>
+			<h6><span>主要内容</span></h6>
+				<p>1.云计算发展趋势<br/> 2.中国联通云计算产品及服务体系规划<br/>3.云计算业务商机挖掘与需求分析<br/> 4.云计算业务营销技能提升要点</p>
+		</footer>
+	</div>
+</body>
+<script src="//qzonestyle.gtimg.cn/open/qcloud/video/live/h5/live_connect.js" charset="utf-8"></script>
+<script type="text/javascript">
+ if (/micromessenger/ig.test(navigator.userAgent) == false) {
+window.location.href="weixin:"; 
+}    
+    (function () {
+        var player = new qcVideo.Player("id_video_container", {
+            "channel_id": "9896587163728389930",
+            "app_id": "1253384346",
+            "width" : 506,
+            "height" : 294,
+            "h5_start_patch" : {
+            	url:"./img/two.png"
+                                }
+        });
+    })()
+</script>
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript">
+    var bRotate = false;
+	function onBridgeReady(){
+			WeixinJSBridge.call('hideOptionMenu');
+	}
+	if (typeof WeixinJSBridge == "undefined"){
+	if( document.addEventListener ){
+	    document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+	}else if (document.attachEvent){
+	    document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+	    document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+	}
+	}else{
+	onBridgeReady();
+	}
+
+
+</script>
+</html>
